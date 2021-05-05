@@ -1,6 +1,6 @@
 const app = new Vue({
   el: "#app",
-  data:{
+  data: {
     // timer con valore deafult null
     timer: false,
     // playing di default false (mi serve in html per mostrare e nascondere i pulsanti della consolle)
@@ -21,39 +21,39 @@ const app = new Vue({
     ],
   },
   methods: {
-    goNext(){
+    goNext() {
       // aumento il contatore di 1 ogni volta che la funzione viene richiamata
       this.counter++;
       console.log(this.counter);
       // quando il contatore ha come valore la lunghezza dell'array lo riporto a 0
-      if(this.counter === this.img.length){
-        this.counter = 0
+      if (this.counter === this.img.length) {
+        this.counter = 0;
       }
     },
-    goBack(){
+    goBack() {
       // diminuisco il contatore di 1 ogni volta che la funzione viene richiamata
       this.counter--;
       console.log(this.counter);
       // quando il contatore ha valore negativo lo riporto alla lunghezza dell'array -1
-      if(this.counter < 0){
-        this.counter = this.img.length -1
+      if (this.counter < 0) {
+        this.counter = this.img.length - 1;
       }
     },
     // play setta l'inytervallo del timer e richiama funzione goNext
-    play(){
+    play() {
       // imposto un ritardo di .8 secondi per far partire lo slide
       this.timer = setTimeout(this.goNext, 800);
       // scorro le immagini ogni 3 secondi
       this.timer = setInterval(this.goNext, 3000);
-      this.playing = true
+      this.playing = true;
     },
-    stop(){
-      // con clearInterval interrompo lo slide 
-      this.timer = clearInterval(this.timer)
+    stop() {
+      // con clearInterval interrompo lo slide
+      this.timer = clearInterval(this.timer);
       // riporto il contatore a 0
       this.counter = 0;
       // playng false mi serve per mostrare di nuovo il pulsante play in html
       this.playing = false;
     },
   },
-})
+});
