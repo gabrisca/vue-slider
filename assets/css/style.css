@@ -6,5 +6,71 @@
 
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: darkslateblue;
+  background-color: black;
+}
+
+.container {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.wrapper {
+  /* background-color: blue; */
+  width: 100%;
+}
+
+h1 {
+  color: goldenrod;
+  text-align: center;
+  margin: 20px;
+}
+
+.images {
+  /* height: 100%; */
+  position: relative;
+}
+
+.images img{
+  width: 100%;
+}
+
+.back,
+.next {
+  color: goldenrod;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+.back:hover,
+.next:hover {
+  color: rgba(255, 186, 11, 0.678);
+}
+
+.back {
+  left: -5%;
+}
+.next {
+  right: -5%;
+}
+
+.nav {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.479);
+  border-radius: 999px;
+}
+
+.nav i{
+  color: white;
+}
+
+.nav i.active {
+  color: goldenrod;
 }
