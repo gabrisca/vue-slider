@@ -44,9 +44,10 @@
           </div>
 
         </div>
-        
+    
         <div class="consolle">
-          <i @click="play" class="fas fa-play fa-2x"></i>
+          <i v-if="playing" @click="stop" class="fas fa-stop fa-2x"></i>
+          <i v-else @click="play" class="fas fa-play fa-2x"></i>
         </div>
   
       </div>

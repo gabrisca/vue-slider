@@ -86,6 +86,7 @@ h1 {
 }
 
 .consolle i {
+  margin-top: 20px;
   color: white;
   cursor: pointer;
 }
