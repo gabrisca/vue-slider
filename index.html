@@ -20,6 +20,7 @@
 
         <div class="images">
 
+          <!-- al click richiamo funzione goBack -->
           <div class="back" @click="goBack">
             <i class="fas fa-caret-left fa-2x"></i> 
           </div>
@@ -37,12 +38,17 @@
              ></i>
           </div>
 
+          <!-- al click richiamo funzione goNext -->
           <div class="next" @click="goNext">
             <i class="fas fa-caret-right fa-2x"></i> 
           </div>
 
         </div>
-
+        
+        <div class="consolle">
+          <i @click="play" class="fas fa-play fa-2x"></i>
+        </div>
+  
       </div>
     </div>
     

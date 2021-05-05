@@ -1,7 +1,11 @@
 const app = new Vue({
   el: "#app",
   data:{
+    // timer con valore deafult null
+    timer: null,
+    // counter con valore default 0
     counter: 0,
+    // array di immagini
     img: [
       "assets/img/episodio I.png",
       "assets/img/episodio II.jpg",
@@ -32,6 +36,10 @@ const app = new Vue({
       if(this.counter < 0){
         this.counter = this.img.length -1
       }
+    },
+    // play setta l'inytervallo del timer e richiama funzione goNext
+    play(){
+      this.timer = setInterval(this.goNext, 3000);
     },
   },
 })

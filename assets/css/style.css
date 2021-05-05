@@ -77,3 +77,19 @@ h1 {
 .nav i.active {
   color: goldenrod;
 }
+
+.consolle {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.consolle i {
+  color: white;
+  cursor: pointer;
+}
+
+.consolle i:hover{
+  color: rgba(255, 186, 11, 0.678);
+}
