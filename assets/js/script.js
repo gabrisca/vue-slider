@@ -16,10 +16,22 @@ const app = new Vue({
   },
   methods: {
     goNext(){
-      this.counter++
+      // aumento il contatore di 1 ogni volta che la funzione viene richiamata
+      this.counter++;
+      console.log(this.counter);
+      // quando il contatore ha come valore la lunghezza dell'array lo riporto a 0
+      if(this.counter === this.img.length){
+        this.counter = 0
+      }
     },
     goBack(){
-      this.counter--
+      // diminuisco il contatore di 1 ogni volta che la funzione viene richiamata
+      this.counter--;
+      console.log(this.counter);
+      // quando il contatore ha valore negativo lo riporto alla lunghezza dell'array -1
+      if(this.counter < 0){
+        this.counter = this.img.length -1
+      }
     },
   },
 })

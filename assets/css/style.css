@@ -65,10 +65,13 @@ h1 {
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.479);
   border-radius: 999px;
+  padding: 5px;
 }
 
 .nav i{
   color: white;
+  margin: 3px;
+  cursor: pointer;
 }
 
 .nav i.active {

@@ -27,15 +27,14 @@
           <img :src="img[counter]" alt="">
 
           <div class="nav">
-            <!-- <i class="fas fa-circle active"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i> -->
+            <!-- stampo i circle con ciclo v-for -->
+            <!-- quando l'indice è uguale al counter aggiungo classe active -->
+            <!-- al click sul circle richiamo il relativo index; così mi mostra la foto collegata -->
+            <i v-for="(circle, index) in img"
+            :class="(index === counter) ? 'active' : null"
+             class="fas fa-circle"
+             @click="counter = index"
+             ></i>
           </div>
 
           <div class="next" @click="goNext">
